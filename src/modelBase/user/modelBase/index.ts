@@ -1,4 +1,5 @@
 import { makeAutoObservable } from "mobx";
+import Remote from "../modelRemote/index";
 
 class UserBaseModel {
   constructor() {
@@ -11,6 +12,9 @@ class UserBaseModel {
   }
   resetTime() {
     this.time = 1;
+  }
+  getUserInfo(data) {
+    return Remote.getUserInfo(data);
   }
 }
 
